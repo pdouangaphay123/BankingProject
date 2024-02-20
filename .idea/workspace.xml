@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed7b396c-4b28-4f86-877e-ea4d302a97c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utility/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utility/ConnectionFactory.java" afterDir="false" />
+    <list default="true" id="ed7b396c-4b28-4f86-877e-ea4d302a97c6" name="Changes" comment="DAO completion and Connection class for db .properties added abstraction.">
       <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/AccountServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utility/Connections.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Validation/Validation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/java/banking/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/java/banking/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +79,21 @@
       <option name="presentableId" value="Default" />
       <updated>1707860369325</updated>
     </task>
+    <task id="LOCAL-00001" summary="DAO completion and Connection class for db .properties added abstraction.">
+      <option name="closed" value="true" />
+      <created>1708396888280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708396888280</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial banking app cli" />
+    <MESSAGE value="DAO completion and Connection class for db .properties added abstraction." />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO completion and Connection class for db .properties added abstraction." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -102,16 +102,6 @@
           <properties class="java.sql.SQLIntegrityConstraintViolationException" package="java.sql" />
           <option name="timeStamp" value="9" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Utility/ConnectionFactory.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Utility/ConnectionFactory.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
