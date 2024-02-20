@@ -3,8 +3,11 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-test/
-resources/
+src/main/test/
+
+
+src/main/resources/
+*.properties
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
