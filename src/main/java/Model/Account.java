@@ -1,28 +1,10 @@
 package Model;
 
-import java.util.*;
-
 public class Account {
 
     private int accountId;
+    private int userId;
     private double balance;
-
-    public Account(int accountId, double balance) {
-
-        this.accountId = accountId;
-        this.balance = 0;
-    }
-
-    public Account() {
-    }
-
-    //make constructor all args and also getter and setters
-    /*public Account(int accountId, int balance){
-
-        this.accountId = accountId;
-        this.balance = balance;
-
-    }*/
 
     public int getAccountId(){
 
@@ -34,19 +16,21 @@ public class Account {
         return this.balance;
     }
 
+    public int getUserId(){
+
+        return this.userId;
+    }
+
     // setters
-    public void setDeposit(double amount){ // initial deposit
+    public void setDeposit(double amount){
 
         this.balance += amount;
-
     }
 
     public void setWithdraw(double amount) {
 
         if (amount <= this.balance)
             this.balance -= amount;
-
-        else System.out.println("Insufficient funds to withdraw, try again.");
     }
 
     public void setAccountId(int accountId) {
@@ -57,6 +41,11 @@ public class Account {
     public void setBalance(double balance) {
 
         this.balance = balance;
+    }
+
+    public void setUserId(int userId) {
+
+        this.userId = userId;
     }
 }
 

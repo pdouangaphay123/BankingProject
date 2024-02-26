@@ -7,7 +7,7 @@ src/main/test/
 
 
 src/main/resources/
-*.properties
+db.properties
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

@@ -14,9 +14,15 @@
 
 package com.java.banking;
 
+import Controller.AccountController;
+import Controller.UserController;
+import DAO.AccountDAO;
+import DAO.UserDAO;
 import Model.User;
+import Service.AccountServices;
+import Service.UserServices;
+import io.javalin.Javalin;
 
-import static Service.UserServices.*;
 
 import java.sql.*;
 import java.util.*;
@@ -25,39 +31,29 @@ import java.lang.*;
 public class Main {
     public static void main(String[] args) {
 
-        User currentUser = new User();
-        boolean status = false;
-        Scanner input = new Scanner(System.in);
+       Javalin app = Javalin.create(config -> {
+            config.plugins.enableCors(cors -> {
+                cors.add(it -> {
+                    it.anyHost();
+                    it.exposeHeader("Authorization");
+                });
+            });
+        }).start(8080);
 
-        while (!status) { // enroll customers or quit to continue to log in
 
-            try {
 
-                System.out.println("Welcome to FirstNations bank\n");
-                System.out.println("Our options are:\n" +
-                        "1 - To enroll\n" +
-                        "2 - To login\n" +
-                        "3 - Quit program");
+        UserDAO userDAO = new UserDAO();
+        AccountDAO accountDAO = new AccountDAO();
 
-                String choice = input.nextLine();
-                int num = Integer.parseInt(choice);
+        UserServices userServices = new UserServices(userDAO);
+        AccountServices accountServices = new AccountServices(accountDAO);
 
-                switch (num){
 
-                    case 1:
-                        isEnrolling(currentUser, input); // enroll
-                        break;
-                    case 2:
-                        isLogIn(currentUser, input); // login
-                        break;
-                    case 3:
-                        status = true; // quit program
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid option! Try again.");
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
+        UserController userController = new UserController(app, userServices, accountServices);
+        AccountController accountController = new AccountController(app, accountServices);
+
+        userController.userEndpoint(app);
+        accountController.accountEndpoint(app);
+
     }
 }

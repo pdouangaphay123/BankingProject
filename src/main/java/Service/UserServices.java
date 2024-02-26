@@ -1,106 +1,58 @@
 package Service;
 
+import Controller.UserController;
+import DAO.AccountDAO;
+import DAO.UserDAO;
+import Model.Account;
 import Model.User;
+import Utility.DTO.LoginCreds;
+import io.javalin.http.Context;
 
 import java.sql.*;
-import java.util.Scanner;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static DAO.UserDAO.*;
-import static Service.AccountServices.logIn;
-
 public class UserServices {
 
-    // function that enrolls customers by using conditional if statement and puts key and value in Hashmap
-    public static void isEnrolling(User currentUser, Scanner input) throws SQLException {
-
-        boolean validating = false;
-        String validEmail = "";
-
-        while (!validating) {
-
-            boolean status = false;
-
-            while (!status) {
-
-                System.out.println("\nEmail requirements:\n" +
-                        "  - Email prefix range 6-16 characters accepted chararacters are A-z,a-z,0-9,_,.\n" +
-                        "  - after the @ symbol accepts character range 2-8 a-z charaters only\n" +
-                        "  - after . accepts only a-z characters range 2-6 and email cannot be empty");
-
-                System.out.println("Enter email: ");
-                validEmail = input.nextLine();
-
-                validating = isEmailExist(validEmail, currentUser);
-
-                if (validating) {
-                    validating = (validateEmail(validEmail, currentUser));
-                    if (validating) {
-                        status = true;
-                    } else {
-                        status = false;
-                    }
-                } else {
-                    System.out.println("Email already exists, try a different email!");
-                }
-            }
-        }
-        input.reset(); // clear from locale scope
-
-        validating = false;
-        do if (!validating) {
-
-            System.out.println("\nPassword requirements:\n" +
-                    "  - Password must be at least 5 characters\n" +
-                    "  - must contain at least 1 digit and cannot contain space\n" +
-                    "  - and cannot be empty");
-            System.out.println("Enter password: ");
-            String validPassword = input.nextLine();
-
-            validating = (validatePassword(validPassword));
-
-            if (!validating) System.out.println("Try again!\n"); //condition to check if email already exists.
-            else {
-                Scanner inputName = new Scanner(System.in);
-                System.out.println("Enter customer name: ");
-                String customerName = inputName.nextLine();
-
-                currentUser = new User(validEmail, validPassword, customerName); // create the user from the @overload method in User class 3 args
-                createUserAccount(validEmail, validPassword, customerName, currentUser);
-            }
-        } while (!validating);
-        input.reset();
+    UserDAO userDAO;
+    AccountDAO accountDAO = new AccountDAO();
+    public UserServices(UserDAO userDAO) {
+        this.userDAO = userDAO;
     }
 
-    // function used to login
-    public static void isLogIn(User currentUser, Scanner input) throws SQLException {
-
-        boolean status = false;
-
-        while (!status) {
-
-            System.out.println("Enter email: ");
-            String validEmail = input.nextLine();
-            input.reset();
-            System.out.println("Enter password: ");
-            String validPassword = input.nextLine();
-            input.reset();
-
-            try {
-                status = validEmailPassword(validEmail, validPassword);
-                if (status) {
-                    currentUser = setIdEmail(currentUser, validEmail, validPassword);
-                } else {
-                    System.out.println("Invalid email or password!");
-                }
-            } catch (SQLException e) {
-                System.out.println(e);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
+    public User registerUser(User user, Context context) throws SQLException {
+        if (user.getEmail() != null && user.getPassword() != null){
+            if(!validateEmail(user.getEmail(), context)) { // check email requirements
+                return null;
             }
+            if(userDAO.checkEmailDB(user.getEmail())){
+                context.status(400);
+                context.json("Email already exists");
+                return null;
+            }
+            if(!validatePassword(user.getPassword(), context)) { // password requirements
+                return null;
+            }
+            if (userDAO.getUserByEmail(user.getEmail()) == null) {
+
+               user = userDAO.createUser(user); // register user
+               Account account = accountDAO.createAccount(user.getUserId()); // initialize account for user
+
+
+               return user;
+            } else {
+                return null;
+            }
+        } return null;
+    }
+
+    public User loginUser(LoginCreds loginCreds) throws SQLException {
+        User loginUser = userDAO.getUserByEmail(loginCreds.getEmail()); // check in db if email exist
+        if (Objects.equals(loginUser.getPassword(), loginCreds.getPassword())){ // check if password matches
+            return loginUser;
         }
-        logIn(currentUser); // valid email and password
+        return null;
     }
 
                                 /* VALIDATION EMAIL AND PW REQUIREMENTS*/
@@ -113,36 +65,42 @@ public class UserServices {
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailId);
         return matcher.find();
     }
-    public static boolean validateEmail(String email, User currentUser) {
+    public static boolean validateEmail(String email, Context context) {
 
         if (email == null) { // validates for if null email
-            System.out.println("Email cannot be empty!");
+            context.status(400);
+            context.json("Email cannot be empty!");
             return false;
         }
 
         if (!validateEmailId(email)) {  // validates if email address is invalid
-            System.out.println("Invalid email address!");
+            context.status(400);
+            context.json("Invalid email address!");
             return false;
         }
 
         return true;
     }
 
-    public static boolean validatePassword(String password){
+    public static boolean validatePassword(String password, Context context){
 
         if (password == null){ // validates for if null password
-            System.out.println("Password cannot be empty!");
+            context.status(400);
+            context.json("Password cannot be empty!");
             return false;
         }
 
         if (password.length() < 5) { // password must be at least 5 characters
-            System.out.println("Password must be at least 5 characters!");
+            context.status(400);
+            context.json("Password must be at least 5 characters!");
             return false;
         } else if (!Pattern.matches("[^ ]*", password)) { // password cannot contain space
-            System.out.println("Password cannot contain space!");
+            context.status(400);
+            context.json("Password cannot contain space!");
             return false;
         } else if (!password.matches(".*\\d.*")) { // password must have at least 1 digit
-            System.out.println("Password must have at least 1 digit!");
+            context.status(400);
+            context.json("Password must have at least 1 digit!");
             return false;
         }
 

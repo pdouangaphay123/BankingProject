@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7b396c-4b28-4f86-877e-ea4d302a97c6" name="Changes" comment="DAO completion and Connection class for db .properties added abstraction.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utility/DTO/AmountDepositWithdraw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utility/DTO/AmountTransferTransaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utility/DTO/LoginCreds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/AccountServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/UserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/java/banking/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/java/banking/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" />
+    </list>
+    <list id="6b8e7269-4837-4154-972b-dd29b583668c" name="Changes by yoh_a" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/UserServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +43,84 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Service/UserServices.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="6" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="3" end1="3" start2="7" end2="9" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="5" end1="6" start2="11" end2="12" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="8" end1="11" start2="14" end2="14" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="14" end1="23" start2="17" end2="22" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="24" end1="25" start2="23" end2="37" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="26" end1="30" start2="38" end2="40" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="31" end1="33" start2="41" end2="41" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="34" end1="46" start2="42" end2="45" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="47" end1="61" start2="46" end2="48" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="62" end1="73" start2="49" end2="55" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="75" end1="105" start2="57" end2="57" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="115" end1="116" start2="67" end2="68" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="118" end1="119" start2="70" end2="72" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="123" end1="124" start2="76" end2="78" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="130" end1="131" start2="84" end2="85" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="133" end1="134" start2="87" end2="89" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="138" end1="139" start2="93" end2="95" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="141" end1="142" start2="97" end2="99" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="144" end1="145" start2="101" end2="103" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/Model/User.java">
+      <ranges>
+        <range start1="2" end1="5" start2="2" end2="3" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="10" end1="11" start2="8" end2="8" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="13" end1="16" start2="10" end2="10" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="17" end1="18" start2="11" end2="11" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="21" end1="22" start2="14" end2="14" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="24" end1="26" start2="16" end2="17" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="30" end1="31" start2="21" end2="21" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="32" end1="42" start2="22" end2="22" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="57" end1="57" start2="37" end2="42" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java">
+      <ranges>
+        <range start1="9" end1="10" start2="9" end2="10" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="11" end1="12" start2="11" end2="26" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="13" end1="15" start2="27" end2="27" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="16" end1="22" start2="28" end2="33" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="24" end1="28" start2="35" end2="35" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="29" end1="30" start2="36" end2="36" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="32" end1="32" start2="38" end2="53" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="33" end1="34" start2="54" end2="55" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="37" end1="43" start2="58" end2="61" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="44" end1="47" start2="62" end2="70" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="48" end1="53" start2="71" end2="84" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="55" end1="57" start2="86" end2="87" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="58" end1="58" start2="88" end2="89" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="60" end1="61" start2="91" end2="92" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="65" end1="67" start2="96" end2="98" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="70" end1="72" start2="101" end2="101" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="80" end1="81" start2="109" end2="110" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="84" end1="87" start2="113" end2="115" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="88" end1="91" start2="116" end2="119" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="94" end1="95" start2="122" end2="123" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="96" end1="97" start2="124" end2="124" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/pom.xml">
+      <ranges>
+        <range start1="5" end1="12" start2="5" end2="5" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="25" end1="28" start2="18" end2="21" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+        <range start1="29" end1="30" start2="22" end2="23" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="31" end1="35" start2="24" end2="27" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="36" end1="36" start2="28" end2="29" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="37" end1="39" start2="30" end2="33" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="40" end1="41" start2="34" end2="35" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="42" end1="45" start2="36" end2="39" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="47" end1="50" start2="41" end2="44" changelist="ed7b396c-4b28-4f86-877e-ea4d302a97c6" />
+        <range start1="53" end1="61" start2="47" end2="47" changelist="6b8e7269-4837-4154-972b-dd29b583668c" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -31,18 +130,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/pdoua/IdeaProjects/BankingProject/src/main/java/com/java/banking/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pdoua/IdeaProjects/BankingProject/src/main/resources&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/pdoua/IdeaProjects/BankingProject/src/main/java/com/java/banking/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pdoua\IdeaProjects\BankingProject\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.java.banking.Main" />
@@ -90,6 +196,17 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial banking app cli" />
     <MESSAGE value="DAO completion and Connection class for db .properties added abstraction." />
@@ -101,6 +218,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.sql.SQLIntegrityConstraintViolationException" package="java.sql" />
           <option name="timeStamp" value="9" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodError" package="java.lang" />
+          <option name="timeStamp" value="11" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
